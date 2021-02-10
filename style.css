@@ -1,0 +1,252 @@
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+
+
+.viewPort{
+  width: 100vw;
+  height:100vh;
+  position: fixed;
+}
+
+.wrapper {
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+  position: fixed;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+}
+.wrapper .item {
+  visibility: hidden;
+  display: none;
+}
+.wrapper h2 {
+  font-size: 4.5em;
+  margin: 0;
+  color: #3a3a3a;
+  text-align: left;
+}
+.wrapper > div {
+  min-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: flex-end;
+  font-weight: bold;
+  color: orange;
+}
+.wrapper > div:after {
+  content: "";
+  width: 10px;
+  height: 4px;
+  display: block;
+  background: black;
+  color: orange;
+  margin-bottom: 4px;
+  margin-left: 2px;
+  animation-duration: 350ms;
+  animation-name: fade;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes fade {
+  from {
+    opacity: 1;
+ }
+  to {
+    opacity: 0;
+ }
+}
+
+
+.header {
+
+  padding: 5px;
+	display: flex;
+  flex-wrap: wrap;
+}
+
+.logoWrap {
+	margin-right: auto;
+}
+
+.menuWrap {
+  display: flex;
+
+  align-items: center;
+  margin: 15px;
+
+}
+
+.menuWrap a {
+  /*margin: auto;*/ /* To vertically center the menu links, this can be used as an alternative to align-items: center in .menuWrap */
+  padding: 0 10px;
+
+  font-size: 2.25em;
+
+}
+.fa {
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+
+.logoWrap img {
+  border-radius: 4px;
+  padding: 10px;
+  margin-left: 10px;
+  width: 6.25em;
+}
+
+
+#demon-container {
+ 
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+
+ 
+  height: 5em;
+  width: 5em;
+}
+
+#demon-svg {
+  height: 5em;
+  width: 5em;
+  cursor: pointer;
+}
+
+
+
+.dancing-demon {
+  animation: demon-dance .8s infinite alternate ease-in-out;
+}
+
+
+
+/* credit to: https://codepen.io/fleemaja/pen/xBoWXj */
+@keyframes demon-dance {
+  from, 49% { transform-origin: -50% 100%; }
+  50%, 75%, to { transform-origin: 150% 100%; }
+  25% { transform: rotate(-5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(5deg); }
+}
+
+
+
+
+
+
+
+
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio : 2)
+    {
+
+
+      #demon-svg {
+        height: 10em;
+        width: 10em;
+        cursor: pointer;
+      }
+      
+    
+      #demon-container {
+     
+        position: fixed;
+        bottom: 3%;
+        right: 3%;
+     
+      height: 10em;
+      width: 10em;
+    }
+
+    .wrapper {
+      padding: 10px;
+      margin: 0 auto;
+      text-align: center;
+      position: fixed;
+      height: calc(var(--vh, 1vh) * 13);;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    
+    }
+
+  .wrapper h2 {
+    font-size: 8.5em;
+    margin: 0;
+    color: #3a3a3a;
+    text-align: left;
+  }
+
+
+  .wrapper > div {
+    font-size: 2.00em;
+
+    min-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+    color: orange;
+  }
+  .wrapper > div:after {
+    content: "";
+    width: 20px;
+    height: 4px;
+    display: block;
+    background: black;
+    color: orange;
+    margin-bottom: 4px;
+    margin-left: 2px;
+    animation-duration: 350ms;
+    animation-name: fade;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+
+  .logoWrap img {
+    border-radius: 4px;
+    padding: 10px;
+ 
+    width: 11.00em;
+  }
+
+  
+  .menuWrap a {
+    /*margin: auto;*/ /* To vertically center the menu links, this can be used as an alternative to align-items: center in .menuWrap */
+    padding: 0 .200em;
+  
+    font-size: 5.55em;
+  
+
+  }
+
+  .header {
+
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+ 
+ 
+      
+}
+
+
+
